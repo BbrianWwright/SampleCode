@@ -5,7 +5,6 @@ using System.Collections;
 using System.IO;
 using System.Collections.Generic;
 
-
 public class FontMgr
 {
 	private static FontMgr _Instance;
@@ -29,7 +28,6 @@ public class FontMgr
 
 	private List<Font> FontList;
 	
-
 	FontMgr ()
 	{
 		if (_Instance != null)
@@ -42,15 +40,11 @@ public class FontMgr
 		FontList.Add(new Font("pescadero_32px_2outline"));
 	}
 
-
 	public Font GetFont(AvailFonts f)
 	{
 		return FontList[(int)f];
 	}
 }
-
-
-
 
 
 public class Font
@@ -77,7 +71,6 @@ public class Font
 	private string ResourceName;
 	public bool Success;
 
-
 	public Font (string resourceName)
 	{
 		ResourceName = resourceName;
@@ -87,7 +80,6 @@ public class Font
 		Success = ReadFont ();
 //		BuildWord ("The quick brown fox jumped over the lazy sleeping dog.");
 	}
-	
 	
 	private bool ReadFont ()
 	{
@@ -144,7 +136,6 @@ public class Font
 		//print(" "+FontList.Count);
 		return true;
 	}
-	
 
 	// reads line and retrieves character data and creates new struct
 	private FontInfo ReadString (String line)
@@ -182,7 +173,6 @@ public class Font
 		return chardata;
 	}
 
-	
 	
 	/// <summary>
 	/// Builds one character/letter GameObject.
